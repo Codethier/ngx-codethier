@@ -1,9 +1,9 @@
 import { Pipe, PipeTransform } from '@angular/core';
 
 @Pipe({
-  name: 'codethier-ngx-numberSpacer'
+  name: 'CodethierNumberSpacer'
 })
-export class NumberSpacerPipe implements PipeTransform {
+export class CodethierNumberSpacerPipe implements PipeTransform {
 
   transform(value: any,): string {
     if (typeof value === 'number'){

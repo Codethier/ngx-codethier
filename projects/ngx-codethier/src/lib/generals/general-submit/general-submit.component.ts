@@ -2,11 +2,11 @@ import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
 import {Observable} from "rxjs";
 
 @Component({
-  selector: 'codethier-ngx-general-submit',
+  selector: 'codethier-general-submit',
   templateUrl: './general-submit.component.html',
   styleUrls: ['./general-submit.component.scss']
 })
-export class GeneralSubmitComponent implements OnInit {
+export class CodethierGeneralSubmitComponent implements OnInit {
   @Input() obj!: { [something: string]: any }
   //either emit to parent or use string
   // @Input() callbackFuncName!: string

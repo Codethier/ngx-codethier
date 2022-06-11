@@ -1,32 +1,31 @@
 import { NgModule } from '@angular/core';
-import { NgxCodethierComponent } from './ngx-codethier.component';
-import {NumberSpacerPipe} from "./pipes/number-spacer.pipe";
-import {GeneralSubmitComponent} from "./generals/general-submit/general-submit.component";
+import {CodethierNumberSpacerPipe} from "./pipes/number-spacer.pipe";
+import {CodethierGeneralSubmitComponent} from "./generals/general-submit/general-submit.component";
 import {FormsModule} from "@angular/forms";
-import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
 import {InputNumberModule} from "primeng/inputnumber";
 import {CheckboxModule} from "primeng/checkbox";
 import {InputTextModule} from "primeng/inputtext";
 import {ButtonModule} from "primeng/button";
+import {CommonModule} from "@angular/common";
 
 
 
 @NgModule({
   declarations: [
-    NgxCodethierComponent,
-    NumberSpacerPipe,
-    GeneralSubmitComponent
+    CodethierNumberSpacerPipe,
+    CodethierGeneralSubmitComponent
   ],
   imports: [
+    CommonModule,
     FormsModule,
-    BrowserAnimationsModule,
     InputNumberModule,
     CheckboxModule,
     InputTextModule,
     ButtonModule,
   ],
   exports: [
-    NgxCodethierComponent
+    CodethierNumberSpacerPipe,
+    CodethierGeneralSubmitComponent,
   ]
 })
 export class NgxCodethierModule { }
