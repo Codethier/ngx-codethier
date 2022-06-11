@@ -1,0 +1,20 @@
+
+<form (ngSubmit)="onSubmit()" #f='ngForm'>
+  <div class="segment" *ngFor="let key of keysWithTypes">
+  <span class="p-float-label" *ngIf="key.type !== 'boolean'">
+  <input *ngIf="key.type === 'string'" type="text" pInputText id="{{key.key}}" [name]="key.key" [(ngModel)]="obj[key.key]" [disabled]="key.disabled">
+    <p-inputNumber class="number" *ngIf="key.type === 'number'" type="number" id="{{key.key}}" [name]="key.key" [(ngModel)]="obj[key.key]" [disabled]="key.disabled"></p-inputNumber>
+  <label *ngIf="!key.disabled" for="{{key}}"> {{key.key}}</label>
+  </span>
+    <div class="radio" *ngIf="key.type === 'boolean'">
+      <p-checkbox id="{{key.key}}" [name]="key.key" [(ngModel)]="obj[key.key]" [binary]="true"></p-checkbox>
+      <label for="{{key.key}}">{{obj[key.key]}}</label>
+    </div>
+
+
+  </div>
+  <div id="submitButton">
+    <input pButton type="submit" value="Kuldes">
+  </div>
+
+</form>
