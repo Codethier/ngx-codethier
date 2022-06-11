@@ -5,3 +5,4 @@
 export * from './lib/ngx-codethier.module';
 export * from './lib/pipes/number-spacer.pipe';
 export * from './lib/generals/general-submit/general-submit.component';
+export * from './lib/animations/gathered/packOne/index'
