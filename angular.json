@@ -3,5 +3,36 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
+    "ngx-codethier": {
+      "projectType": "library",
+      "root": "projects/ngx-codethier",
+      "sourceRoot": "projects/ngx-codethier/src",
+      "prefix": "codethier",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "project": "projects/ngx-codethier/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/ngx-codethier/tsconfig.lib.prod.json"
+            },
+            "development": {
+              "tsConfig": "projects/ngx-codethier/tsconfig.lib.json"
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/ngx-codethier/src/test.ts",
+            "tsConfig": "projects/ngx-codethier/tsconfig.spec.json",
+            "karmaConfig": "projects/ngx-codethier/karma.conf.js"
+          }
+        }
+      }
+    }
   }
 }
