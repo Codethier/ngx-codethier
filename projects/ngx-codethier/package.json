@@ -1,9 +1,9 @@
 {
   "name": "ngx-codethier",
-  "version": "0.0.7",
+  "version": "0.0.8",
   "peerDependencies": {
-    "@angular/common": "^14.0.0",
-    "@angular/core": "^14.0.0",
+    "@angular/common": "^15.0.4",
+    "@angular/core": "^15.0.4",
     "primeng": "^14.2.3"
   },
   "dependencies": {
