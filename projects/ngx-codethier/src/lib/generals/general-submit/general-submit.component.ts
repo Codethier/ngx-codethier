@@ -23,12 +23,17 @@ export class CodethierGeneralSubmitComponent implements OnInit {
     Object.keys(this.obj).map(i => this.keys.push(i))
     this.keys.map(key => {
       if (this.keysWithTypes){
+        if (key === null){
+          this.keysWithTypes.push({key: key, type: "string", disabled: false})
+        }
         this.keysWithTypes.push({type: typeof this.obj[key], key: key, disabled: false})
       }
       else {
+        if (key === null){
+          this.keysWithTypes = [{key: key, type: "string", disabled: false}]
+        }
         this.keysWithTypes = [{type: typeof this.obj[key], key: key, disabled: false}]
       }
-
     })
     this.keysWithTypes?.map(item => this.disabledFields?.map(field => {
       if (field == item.key){
